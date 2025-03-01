@@ -1,0 +1,48 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_projeler
+@{
+    ViewBag.Title = "ProjeGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Proje Bilgileri Güncelleme Sayfası</h2>
+
+<br />
+<br />
+
+<form class="form-group" method="post">
+
+    <div class="mb-3">
+        @Html.Label("Proje ID", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", placeholder = "Proje ID'sini giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Proje Ad", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.ProjeAdı, new { @class = "form-control", placeholder = "Proje Adını Giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Proje Açıklama", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.ProjeAciklama, new { @class = "form-control", placeholder = "Proje Açıklamasını Giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Proje Durum", htmlAttributes: new { @class = "form-label" })
+        @Html.DropDownListFor(x => x.ProjeDurum, new List<SelectListItem>
+        {
+            new SelectListItem { Text = "Tamam", Value = "Tamam" },
+            new SelectListItem { Text = "Devam", Value = "Devam" },
+            new SelectListItem { Text = "Bas", Value = "Bas" }
+        }, new { @class = "form-control" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Proje Resim", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.projeResim, new { @class = "form-control", placeholder = "Proje Resim URL'ni Giriniz" })
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
+

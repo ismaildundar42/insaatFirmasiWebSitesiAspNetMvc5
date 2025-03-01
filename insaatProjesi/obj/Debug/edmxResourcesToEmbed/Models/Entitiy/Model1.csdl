@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbInsaatProjesiModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbl_hakkimizda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Baslik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="CalisanSayisi" Type="Int32" />
+    <Property Name="MusteriMemnuniyeti" Type="Int32" />
+    <Property Name="TamamlanmisProjeler" Type="Int32" />
+    <Property Name="DevamEdenProjeler" Type="Int32" />
+    <Property Name="Soru1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Cevap1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Soru2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Cevap2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Soru3" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Cevap3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Soru4" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Cevap4" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Soru5" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Cevap5" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Soru6" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Cevap6" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="dbInsaatProjesiEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbl_hakkimizda" EntityType="Self.tbl_hakkimizda" />
+    <EntitySet Name="tbl_calisanlar" EntityType="dbInsaatProjesiModel.tbl_calisanlar" />
+    <EntitySet Name="tbl_iletisim" EntityType="dbInsaatProjesiModel.tbl_iletisim" />
+    <EntitySet Name="tbl_anasayfa" EntityType="dbInsaatProjesiModel.tbl_anasayfa" />
+    <EntitySet Name="tbl_hizmetler" EntityType="dbInsaatProjesiModel.tbl_hizmetler" />
+    <EntitySet Name="tbl_projeler" EntityType="dbInsaatProjesiModel.tbl_projeler" />
+    <EntitySet Name="tbl_admin" EntityType="dbInsaatProjesiModel.tbl_admin" />
+  </EntityContainer>
+  <EntityType Name="tbl_calisanlar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdSoyad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Gorev" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ResimUrl" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_iletisim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Konum" Type="String" MaxLength="450" FixedLength="false" Unicode="false" />
+    <Property Name="Telefon" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_anasayfa">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SliderFoto1" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SliderFoto2" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="SliderFoto3" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Slider1Soz1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Slider1Soz2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Slider2Soz1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Slider2Soz2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Slider3Soz1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Slider3Soz2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Baslik1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Baslik2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Baslik3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama3" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="VideoLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Yorumcu1Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Yorumcu1Meslek" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Yorumcu1Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Yorumcu2Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Yorumcu2Meslek" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Yorumcu2Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Yorumcu3Ad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Yorumcu3Meslek" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Yorumcu3Yorum" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_hizmetler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Baslik" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="Aciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Resim" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_projeler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProjeAdı" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ProjeAciklama" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ProjeDurum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="projeResim" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbl_admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

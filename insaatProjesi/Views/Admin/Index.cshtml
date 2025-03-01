@@ -1,0 +1,34 @@
+﻿@using insaatProjesi.Models.Entitiy
+@model List<tbl_admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Adminler Listesi</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>KULLANICI ADI</th>
+        <th>ŞİFRE</th>
+        <th>SİL</th>
+        <th>GÜNCELLE</th>
+    </tr>
+
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.KullaniciAdi</td>
+            <td>@x.Sifre</td>
+            <td><a href="/Admin/AdminSil/@x.ID" class="btn btn-danger">SİL</a></td>
+            <td><a href="/Admin/AdminGetir/@x.ID" class="btn btn-primary">GÜNCELLE</a></td>
+        </tr>
+    }
+
+
+</table>
+
+<br />
+<a href="/Admin/AdminEkle/" class="btn btn-success">Yeni Admin Ekle</a>

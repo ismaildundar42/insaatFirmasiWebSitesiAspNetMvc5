@@ -1,0 +1,83 @@
+﻿@using insaatProjesi.Models.Entitiy
+@model List<tbl_anasayfa>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Anasayfa Bilgileri Düzenleme Sayfası</h2>
+<br />
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>SLİDER FOTO 1</th>
+        <th>SLİDER FOTO 2</th>
+        <th>SLİDER FOTO 3</th>
+        <th>SLİDER 1 SOZ 1</th>
+        <th>SLİDER 1 SOZ 2</th>
+        <th>SLİDER 2 SOZ 1</th>
+        <th>SLİDER 2 SOZ 2</th>
+        <th>SLİDER 3 SOZ 1</th>
+        <th>SLİDER 3 SOZ 2</th>
+        <th>BAŞLIK 1</th>
+        <th>AÇIKLAMA 1</th>
+        <th>BAŞLIK 2</th>
+        <th>AÇIKLAMA 2</th>
+        <th>BAŞLIK 3</th>
+        <th>AÇIKLAMA 3</th>
+        <th>VİDEO LİNKİ</th>
+        <th>YORUMCU 1 AD</th>
+        <th>YORUMCU 1 MESLEK</th>
+        <th>YORUMCU 1 YORUM</th>
+        <th>YORUMCU 2 AD</th>
+        <th>YORUMCU 2 MESLEK</th>
+        <th>YORUMCU 2 YORUM</th>
+        <th>YORUMCU 3 AD</th>
+        <th>YORUMCU 3 MESLEK</th>
+        <th>YORUMCU 3 YORUM</th>
+        <th>SİL</th>
+        <th>GUNCELLE</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.SliderFoto1</td>
+            <td>@x.SliderFoto2</td>
+            <td>@x.SliderFoto3</td>
+            <td>@x.Slider1Soz1</td>
+            <td>@x.Slider1Soz2</td>
+            <td>@x.Slider2Soz1</td>
+            <td>@x.Slider2Soz2</td>
+            <td>@x.Slider3Soz1</td>
+            <td>@x.Slider3Soz2</td>
+            <td>@x.Baslik1</td>
+            <td>@x.Aciklama1</td>
+            <td>@x.Baslik2</td>
+            <td>@x.Aciklama2</td>
+            <td>@x.Baslik3</td>
+            <td>@x.Aciklama3</td>
+            <td>@x.VideoLink</td>
+            <td>@x.Yorumcu1Ad</td>
+            <td>@x.Yorumcu1Meslek</td>
+            <td>@x.Yorumcu1Yorum</td>
+            <td>@x.Yorumcu2Ad</td>
+            <td>@x.Yorumcu2Meslek</td>
+            <td>@x.Yorumcu2Yorum</td>
+            <td>@x.Yorumcu3Ad</td>
+            <td>@x.Yorumcu3Meslek</td>
+            <td>@x.Yorumcu3Yorum</td>
+            <td><a href="/AdminAnasayfa/AnasayfaSil/@x.ID" class="btn btn-danger">SİL</a></td>
+            <td><a href="/AdminAnasayfa/AnasayfaGetir/@x.ID" class="btn btn-primary">GÜNCELLE</a></td>
+        </tr>
+    }
+
+</table>
+
+<br />
+<a href="/AdminAnasayfa/AnasayfaEkle/" class="btn btn-success">Yeni Anasayfa Bilgisi Ekleme İşlemi</a>
+
+
+

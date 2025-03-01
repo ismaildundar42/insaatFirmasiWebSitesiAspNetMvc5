@@ -1,0 +1,22 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_admin
+@{
+    ViewBag.Title = "AdminEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>Admin Bilgisi Ekleme Ekranı</h2>
+
+<form class="form-group" method="post">
+
+    <input type="text" name="KullaniciAdi" class="form-control" placeholder="Kullanıcı Adı Bilgisi Giriniz..." />
+    <br />
+
+    <input type="text" name="Sifre" class="form-control" placeholder="Şifre Bilgisi Giriniz..." />
+    <br />
+
+    <button class="btn btn-success">Kaydet</button>
+
+</form>
+

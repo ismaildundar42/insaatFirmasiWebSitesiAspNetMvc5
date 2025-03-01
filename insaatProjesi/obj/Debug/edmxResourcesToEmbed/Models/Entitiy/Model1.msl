@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbInsaatProjesiModelStoreContainer" CdmEntityContainer="dbInsaatProjesiEntities2">
+    <EntitySetMapping Name="tbl_hakkimizda">
+      <EntityTypeMapping TypeName="dbInsaatProjesiModel.tbl_hakkimizda">
+        <MappingFragment StoreEntitySet="tbl_hakkimizda">
+          <ScalarProperty Name="Cevap6" ColumnName="Cevap6" />
+          <ScalarProperty Name="Soru6" ColumnName="Soru6" />
+          <ScalarProperty Name="Cevap5" ColumnName="Cevap5" />
+          <ScalarProperty Name="Soru5" ColumnName="Soru5" />
+          <ScalarProperty Name="Cevap4" ColumnName="Cevap4" />
+          <ScalarProperty Name="Soru4" ColumnName="Soru4" />
+          <ScalarProperty Name="Cevap3" ColumnName="Cevap3" />
+          <ScalarProperty Name="Soru3" ColumnName="Soru3" />
+          <ScalarProperty Name="Cevap2" ColumnName="Cevap2" />
+          <ScalarProperty Name="Soru2" ColumnName="Soru2" />
+          <ScalarProperty Name="Cevap1" ColumnName="Cevap1" />
+          <ScalarProperty Name="Soru1" ColumnName="Soru1" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="CalisanSayisi" ColumnName="CalisanSayisi" />
+          <ScalarProperty Name="MusteriMemnuniyeti" ColumnName="MusteriMemnuniyeti" />
+          <ScalarProperty Name="TamamlanmisProjeler" ColumnName="TamamlanmisProjeler" />
+          <ScalarProperty Name="DevamEdenProjeler" ColumnName="DevamEdenProjeler" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_calisanlar">
+      <EntityTypeMapping TypeName="dbInsaatProjesiModel.tbl_calisanlar">
+        <MappingFragment StoreEntitySet="tbl_calisanlar">
+          <ScalarProperty Name="ResimUrl" ColumnName="ResimUrl" />
+          <ScalarProperty Name="Gorev" ColumnName="Gorev" />
+          <ScalarProperty Name="AdSoyad" ColumnName="AdSoyad" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_iletisim">
+      <EntityTypeMapping TypeName="dbInsaatProjesiModel.tbl_iletisim">
+        <MappingFragment StoreEntitySet="tbl_iletisim">
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Konum" ColumnName="Konum" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_anasayfa">
+      <EntityTypeMapping TypeName="dbInsaatProjesiModel.tbl_anasayfa">
+        <MappingFragment StoreEntitySet="tbl_anasayfa">
+          <ScalarProperty Name="Yorumcu3Yorum" ColumnName="Yorumcu3Yorum" />
+          <ScalarProperty Name="Yorumcu3Meslek" ColumnName="Yorumcu3Meslek" />
+          <ScalarProperty Name="Yorumcu3Ad" ColumnName="Yorumcu3Ad" />
+          <ScalarProperty Name="Yorumcu2Yorum" ColumnName="Yorumcu2Yorum" />
+          <ScalarProperty Name="Yorumcu2Meslek" ColumnName="Yorumcu2Meslek" />
+          <ScalarProperty Name="Yorumcu2Ad" ColumnName="Yorumcu2Ad" />
+          <ScalarProperty Name="Yorumcu1Yorum" ColumnName="Yorumcu1Yorum" />
+          <ScalarProperty Name="Yorumcu1Meslek" ColumnName="Yorumcu1Meslek" />
+          <ScalarProperty Name="Yorumcu1Ad" ColumnName="Yorumcu1Ad" />
+          <ScalarProperty Name="VideoLink" ColumnName="VideoLink" />
+          <ScalarProperty Name="Aciklama3" ColumnName="Aciklama3" />
+          <ScalarProperty Name="Baslik3" ColumnName="Baslik3" />
+          <ScalarProperty Name="Aciklama2" ColumnName="Aciklama2" />
+          <ScalarProperty Name="Baslik2" ColumnName="Baslik2" />
+          <ScalarProperty Name="Aciklama1" ColumnName="Aciklama1" />
+          <ScalarProperty Name="Baslik1" ColumnName="Baslik1" />
+          <ScalarProperty Name="Slider3Soz2" ColumnName="Slider3Soz2" />
+          <ScalarProperty Name="Slider3Soz1" ColumnName="Slider3Soz1" />
+          <ScalarProperty Name="Slider2Soz2" ColumnName="Slider2Soz2" />
+          <ScalarProperty Name="Slider2Soz1" ColumnName="Slider2Soz1" />
+          <ScalarProperty Name="Slider1Soz2" ColumnName="Slider1Soz2" />
+          <ScalarProperty Name="Slider1Soz1" ColumnName="Slider1Soz1" />
+          <ScalarProperty Name="SliderFoto3" ColumnName="SliderFoto3" />
+          <ScalarProperty Name="SliderFoto2" ColumnName="SliderFoto2" />
+          <ScalarProperty Name="SliderFoto1" ColumnName="SliderFoto1" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_hizmetler">
+      <EntityTypeMapping TypeName="dbInsaatProjesiModel.tbl_hizmetler">
+        <MappingFragment StoreEntitySet="tbl_hizmetler">
+          <ScalarProperty Name="Resim" ColumnName="Resim" />
+          <ScalarProperty Name="Aciklama" ColumnName="Aciklama" />
+          <ScalarProperty Name="Baslik" ColumnName="Baslik" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_projeler">
+      <EntityTypeMapping TypeName="dbInsaatProjesiModel.tbl_projeler">
+        <MappingFragment StoreEntitySet="tbl_projeler">
+          <ScalarProperty Name="projeResim" ColumnName="projeResim" />
+          <ScalarProperty Name="ProjeDurum" ColumnName="ProjeDurum" />
+          <ScalarProperty Name="ProjeAciklama" ColumnName="ProjeAciklama" />
+          <ScalarProperty Name="ProjeAdı" ColumnName="ProjeAdı" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbl_admin">
+      <EntityTypeMapping TypeName="dbInsaatProjesiModel.tbl_admin">
+        <MappingFragment StoreEntitySet="tbl_admin">
+          <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

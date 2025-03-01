@@ -1,0 +1,36 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_projeler
+@{
+    ViewBag.Title = "ProjeEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>Proje Bilgisi Ekleme Ekranı</h2>
+
+<form class="form-group" method="post">
+
+    <input type="text" name="ProjeAdı" class="form-control" placeholder="Proje Adını Giriniz..." />
+    <br />
+
+    <input type="text" name="ProjeAciklama" class="form-control" placeholder="Proje Açıklamasını Giriniz..." />
+    <br />
+
+    <div class="mb-3">
+        @Html.Label("Proje Durumunu Seçiniz", htmlAttributes: new { @class = "form-label" })
+        @Html.DropDownList("ProjeDurum", new List<SelectListItem>
+        {
+            new SelectListItem { Text = "Tamam", Value = "Tamam" },
+            new SelectListItem { Text = "Devam", Value = "Devam" },
+            new SelectListItem { Text = "Bas", Value = "Bas" }
+        }, "Proje Durumu Seçiniz", new { @class = "form-control" })
+    </div>
+
+    <input type="text" name="projeResim" class="form-control" placeholder="Proje Resim URL'ni Giriniz..." />
+    <br />
+
+    <button class="btn btn-success">Kaydet</button>
+
+</form>
+
+

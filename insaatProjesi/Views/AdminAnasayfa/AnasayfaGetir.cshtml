@@ -1,0 +1,152 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_anasayfa
+
+@{
+    ViewBag.Title = "AnasayfaGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Anasayfa Bilgileri Güncelleme Sayfası</h2>
+
+<br />
+<br />
+
+<form class="form-group" method="post">
+
+    <div class="mb-3">
+        @Html.Label("ID", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", placeholder = "ID'sini giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Slider 1 Fotoğraf Linki", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.SliderFoto1, new { @class = "form-control", placeholder = "Slider 1 Fotoğraf Linki" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Slider 2 Fotoğraf Linki", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.SliderFoto2, new { @class = "form-control", placeholder = "Slider 2 Fotoğraf Linki" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Slider 3 Fotoğraf Linki", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.SliderFoto3, new { @class = "form-control", placeholder = "Slider 3 Fotoğraf Linki" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Slider 1 Söz 1", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Slider1Soz1, new { @class = "form-control", placeholder = "Slider 1 Söz 1" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Slider 1 Söz 2", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Slider1Soz2, new { @class = "form-control", placeholder = "Slider 1 Söz 2" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Slider 2 Söz 1", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Slider2Soz1, new { @class = "form-control", placeholder = "Slider 2 Söz 1" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Slider 2 Söz 2", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Slider2Soz2, new { @class = "form-control", placeholder = "Slider 2 Söz 2" })
+    </div>
+
+
+    <div class="mb-3">
+        @Html.Label("Slider 3 Söz 1", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Slider3Soz1, new { @class = "form-control", placeholder = "Slider 3 Söz 1" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Slider 3 Söz 2", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Slider3Soz2, new { @class = "form-control", placeholder = "Slider 3 Söz 2" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Başlık 1", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Baslik1, new { @class = "form-control", placeholder = "Başlık 1" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Açıklama 1", htmlAttributes: new { @class = "form-label" })
+        @Html.TextAreaFor(x => x.Aciklama1, new { @class = "form-control", placeholder = "Açıklama 1", rows = "6", style = "font-size: 18px; padding: 10px;" })
+    </div>
+
+
+    <div class="mb-3">
+        @Html.Label("Başlık 2", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Baslik2, new { @class = "form-control", placeholder = "Başlık 2" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Açıklama 2", htmlAttributes: new { @class = "form-label" })
+        @Html.TextAreaFor(x => x.Aciklama2, new { @class = "form-control", placeholder = "Açıklama 2", rows = "6", style = "font-size: 18px; padding: 10px;" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Başlık 3", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Baslik3, new { @class = "form-control", placeholder = "Başlık 3" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Açıklama 3", htmlAttributes: new { @class = "form-label" })
+        @Html.TextAreaFor(x => x.Aciklama3, new { @class = "form-control", placeholder = "Açıklama 3", rows = "6", style = "font-size: 18px; padding: 10px;" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Video Linki", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.VideoLink, new { @class = "form-control", placeholder = "Video Linki" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Yorumcu 1 Ad", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Yorumcu1Ad, new { @class = "form-control", placeholder = "Yorumcu 1 Ad" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Yorumcu 1 Meslek", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Yorumcu1Meslek, new { @class = "form-control", placeholder = "Yorumcu 1 Meslek" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Yorumcu 1 Yorum", htmlAttributes: new { @class = "form-label" })
+        @Html.TextAreaFor(x => x.Yorumcu1Yorum, new { @class = "form-control", placeholder = "\"Yorumcu 1 Yorum", rows = "6", style = "font-size: 18px; padding: 10px;" })
+    </div>
+
+
+    <div class="mb-3">
+        @Html.Label("Yorumcu 2 Ad", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Yorumcu2Ad, new { @class = "form-control", placeholder = "Yorumcu 1 Ad" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Yorumcu 2 Meslek", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Yorumcu2Meslek, new { @class = "form-control", placeholder = "Yorumcu 2 Meslek" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Yorumcu 2 Yorum", htmlAttributes: new { @class = "form-label" })
+        @Html.TextAreaFor(x => x.Yorumcu2Yorum, new { @class = "form-control", placeholder = "\"Yorumcu 2 Yorum", rows = "6", style = "font-size: 18px; padding: 10px;" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Yorumcu 3 Ad", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Yorumcu3Ad, new { @class = "form-control", placeholder = "Yorumcu 3 Ad" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Yorumcu 3 Meslek", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Yorumcu3Meslek, new { @class = "form-control", placeholder = "Yorumcu 3 Meslek" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Yorumcu 3 Yorum", htmlAttributes: new { @class = "form-label" })
+        @Html.TextAreaFor(x => x.Yorumcu3Yorum, new { @class = "form-control", placeholder = "\"Yorumcu 3 Yorum", rows = "6", style = "font-size: 18px; padding: 10px;" })
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
+

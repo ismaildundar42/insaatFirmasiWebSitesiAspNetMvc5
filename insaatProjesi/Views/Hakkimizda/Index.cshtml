@@ -1,0 +1,227 @@
+﻿@using insaatProjesi.Models.Entitiy;
+@model List<tbl_hakkimizda>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+<head>
+
+    <meta charset="utf-8">
+    <title>Builderz - Construction Company Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Construction Company Website Template" name="keywords">
+    <meta content="Construction Company Website Template" name="description">
+
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- CSS Libraries -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="~/web/lib/flaticon/font/flaticon.css" rel="stylesheet">
+    <link href="~/web/lib/animate/animate.min.css" rel="stylesheet">
+    <link href="~/web/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="~/web/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="~/web/lib/slick/slick.css" rel="stylesheet">
+    <link href="~/web/lib/slick/slick-theme.css" rel="stylesheet">
+
+
+
+
+</head>
+
+@foreach (var x in Model)
+{
+    <div class="about wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 col-md-6">
+                    <div class="about-img">
+                        <img src="~/web/img/about.jpg" alt="Image">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6">
+                    <div class="section-header text-left">
+                        <h2><p>Ay Yıldız İnşaat'a Hoşgeldiniz</p></h2>
+                        <h1>@x.Baslik</h1>
+                    </div>
+                    <div class="about-text">
+                        <p>@x.Aciklama</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fact">
+        <div class="container-fluid">
+            <div class="row counters">
+                <div class="col-md-6 fact-left wow slideInLeft">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="fact-icon">
+                                <i class="flaticon-worker"></i>
+                            </div>
+                            <div class="fact-text">
+                                <h2 data-toggle="counter-up">@x.CalisanSayisi</h2>
+                                <p>Çalışan Sayısı</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fact-icon">
+                                <i class="flaticon-building"></i>
+                            </div>
+                            <div class="fact-text">
+                                <h2 data-toggle="counter-up">@x.MusteriMemnuniyeti</h2>
+                                <p>Müşteri Memnuniyeti %</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 fact-right wow slideInRight">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="fact-icon">
+                                <i class="flaticon-address"></i>
+                            </div>
+                            <div class="fact-text">
+                                <h2 data-toggle="counter-up">@x.TamamlanmisProjeler</h2>
+                                <p>Tamamlanmış Projeler</p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="fact-icon">
+                                <i class="flaticon-crane"></i>
+                            </div>
+                            <div class="fact-text">
+                                <h2 data-toggle="counter-up">@x.DevamEdenProjeler</h2>
+                                <p>Yapımı Devam Eden Projeler</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="faqs">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Sıkça Sorulan Sorular</p>
+                <h2>İnceleyebilirsiniz</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="accordion-1">
+                        <div class="card wow fadeInLeft" data-wow-delay="0.1s">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
+                                    @x.Soru1
+                                </a>
+                            </div>
+                            <div id="collapseOne" class="collapse" data-parent="#accordion-1">
+                                <div class="card-body">
+                                    @x.Cevap1
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card wow fadeInLeft" data-wow-delay="0.2s">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo">
+                                    @x.Soru2
+                                </a>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
+                                <div class="card-body">
+                                    @x.Cevap2
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card wow fadeInLeft" data-wow-delay="0.3s">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree">
+                                    @x.Soru3
+                                </a>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-parent="#accordion-1">
+                                <div class="card-body">
+                                    @x.Cevap3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="accordion-2">
+                        <div class="card wow fadeInRight" data-wow-delay="0.1s">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix">
+                                    @x.Soru4
+                                </a>
+                            </div>
+                            <div id="collapseSix" class="collapse" data-parent="#accordion-2">
+                                <div class="card-body">
+                                    @x.Cevap4
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card wow fadeInRight" data-wow-delay="0.2s">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseSeven">
+                                    @x.Soru5
+                                </a>
+                            </div>
+                            <div id="collapseSeven" class="collapse" data-parent="#accordion-2">
+                                <div class="card-body">
+                                    @x.Cevap5
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card wow fadeInRight" data-wow-delay="0.3s">
+                            <div class="card-header">
+                                <a class="card-link collapsed" data-toggle="collapse" href="#collapseEight">
+                                    @x.Soru6
+                                </a>
+                            </div>
+                            <div id="collapseEight" class="collapse" data-parent="#accordion-2">
+                                <div class="card-body">
+                                    @x.Cevap6
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Template Stylesheet -->
+    <link href="~/web/css/style.css" rel="stylesheet">
+
+    <!-- JavaScript Libraries (Doğru yüklenme sırası) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+ <!-- jQuery -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+ <!-- Bootstrap Bundle -->
+    <!-- Diğer kütüphaneler -->
+    <script src="~/web/lib/easing/easing.min.js"></script>
+    <script src="~/web/lib/wow/wow.min.js"></script>
+    <script src="~/web/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="~/web/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="~/web/lib/lightbox/js/lightbox.min.js"></script>
+    <script src="~/web/lib/waypoints/waypoints.min.js"></script>
+    <script src="~/web/lib/counterup/counterup.min.js"></script>
+    <script src="~/web/lib/slick/slick.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="~/web/js/main.js"></script>
+
+}
+

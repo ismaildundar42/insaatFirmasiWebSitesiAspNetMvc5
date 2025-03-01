@@ -1,0 +1,25 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_iletisim
+@{
+    ViewBag.Title = "IletisimBilgileriEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+
+<h2>İletişim Bilgisi Ekleme Ekranı</h2>
+
+<form class="form-group" method="post">
+
+    <input type="text" name="Konum" class="form-control" placeholder="Adres Bilgisi Giriniz..." />
+    <br />
+
+    <input type="text" name="Telefon" class="form-control" placeholder="Telefon Bilgisi Giriniz..."
+           pattern="\d{11}" maxlength="11" required title="Telefon numarası 11 haneli olmalıdır." />
+    <br />
+
+    <input type="text" name="Mail" class="form-control" placeholder="Mail Bilgisi Giriniz..." />
+    <br />
+
+    <button class="btn btn-success">Kaydet</button>
+
+</form>
+

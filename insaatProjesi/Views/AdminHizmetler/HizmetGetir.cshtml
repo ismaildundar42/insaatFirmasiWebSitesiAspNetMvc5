@@ -1,0 +1,40 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_hizmetler
+@{
+    ViewBag.Title = "HizmetGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Hizmet Bilgileri Güncelleme Sayfası</h2>
+
+<br />
+<br />
+
+<form class="form-group" method="post">
+
+    <div class="mb-3">
+        @Html.Label("Hizmet ID", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", placeholder = "Hizmet ID'sini giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Başlık", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control", placeholder = "Başlık Giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Açıklama", htmlAttributes: new { @class = "form-label" })
+        @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control", placeholder = "Açıklama Bilgisini Giriniz", rows = "16" })
+    </div>
+
+
+    <div class="mb-3">
+        @Html.Label("Resim", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Resim, new { @class = "form-control", placeholder = "Resim URL'ni Giriniz" })
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
+
+

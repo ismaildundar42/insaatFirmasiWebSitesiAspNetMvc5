@@ -1,0 +1,35 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_hizmetler
+@{
+    ViewBag.Title = "HizmetEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+
+<h2>Hizmet Bilgisi Ekleme Ekranı</h2>
+
+<form class="form-group" method="post">
+
+    <input type="text" name="Baslik" class="form-control" placeholder="Hizmet Başlığını Giriniz..." />
+    <br />
+
+    <style>
+        .buyuk-input {
+            font-size: 18px;
+            padding: 10px;
+        }
+    </style>
+
+    <input type="text" name="Aciklama" class="form-control buyuk-input" placeholder="Hizmet Açıklamasını Giriniz..." />
+    <br />
+
+
+    <input type="text" name="Resim" class="form-control" placeholder="Hizmet Resim URL'ni Giriniz..." />
+    <br />
+
+    <button class="btn btn-success">Kaydet</button>
+
+</form>
+
+
+

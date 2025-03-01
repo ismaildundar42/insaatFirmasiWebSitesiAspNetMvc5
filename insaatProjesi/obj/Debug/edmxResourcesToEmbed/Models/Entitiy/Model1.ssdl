@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbInsaatProjesiModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbl_admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="varchar" MaxLength="50" />
+    <Property Name="Sifre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_anasayfa">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SliderFoto1" Type="varchar" MaxLength="250" />
+    <Property Name="SliderFoto2" Type="varchar" MaxLength="250" />
+    <Property Name="SliderFoto3" Type="varchar" MaxLength="250" />
+    <Property Name="Slider1Soz1" Type="varchar" MaxLength="50" />
+    <Property Name="Slider1Soz2" Type="varchar" MaxLength="50" />
+    <Property Name="Slider2Soz1" Type="varchar" MaxLength="50" />
+    <Property Name="Slider2Soz2" Type="varchar" MaxLength="50" />
+    <Property Name="Slider3Soz1" Type="varchar" MaxLength="50" />
+    <Property Name="Slider3Soz2" Type="varchar" MaxLength="50" />
+    <Property Name="Baslik1" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama1" Type="varchar(max)" />
+    <Property Name="Baslik2" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama2" Type="varchar(max)" />
+    <Property Name="Baslik3" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama3" Type="varchar(max)" />
+    <Property Name="VideoLink" Type="varchar(max)" />
+    <Property Name="Yorumcu1Ad" Type="varchar" MaxLength="50" />
+    <Property Name="Yorumcu1Meslek" Type="varchar" MaxLength="50" />
+    <Property Name="Yorumcu1Yorum" Type="varchar(max)" />
+    <Property Name="Yorumcu2Ad" Type="varchar" MaxLength="50" />
+    <Property Name="Yorumcu2Meslek" Type="varchar" MaxLength="50" />
+    <Property Name="Yorumcu2Yorum" Type="varchar(max)" />
+    <Property Name="Yorumcu3Ad" Type="varchar" MaxLength="50" />
+    <Property Name="Yorumcu3Meslek" Type="varchar" MaxLength="50" />
+    <Property Name="Yorumcu3Yorum" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_calisanlar">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AdSoyad" Type="varchar" MaxLength="100" />
+    <Property Name="Gorev" Type="varchar" MaxLength="100" />
+    <Property Name="ResimUrl" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="tbl_hakkimizda">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="50" />
+    <Property Name="Aciklama" Type="varchar(max)" />
+    <Property Name="CalisanSayisi" Type="int" />
+    <Property Name="MusteriMemnuniyeti" Type="int" />
+    <Property Name="TamamlanmisProjeler" Type="int" />
+    <Property Name="DevamEdenProjeler" Type="int" />
+    <Property Name="Soru1" Type="varchar" MaxLength="250" />
+    <Property Name="Cevap1" Type="varchar(max)" />
+    <Property Name="Soru2" Type="varchar" MaxLength="250" />
+    <Property Name="Cevap2" Type="varchar(max)" />
+    <Property Name="Soru3" Type="varchar" MaxLength="250" />
+    <Property Name="Cevap3" Type="varchar(max)" />
+    <Property Name="Soru4" Type="varchar" MaxLength="250" />
+    <Property Name="Cevap4" Type="varchar(max)" />
+    <Property Name="Soru5" Type="varchar" MaxLength="250" />
+    <Property Name="Cevap5" Type="varchar(max)" />
+    <Property Name="Soru6" Type="varchar" MaxLength="250" />
+    <Property Name="Cevap6" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_hizmetler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Baslik" Type="varchar" MaxLength="250" />
+    <Property Name="Aciklama" Type="varchar(max)" />
+    <Property Name="Resim" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="tbl_iletisim">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Konum" Type="varchar" MaxLength="450" />
+    <Property Name="Telefon" Type="varchar" MaxLength="15" />
+    <Property Name="Mail" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tbl_projeler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProjeAdı" Type="varchar" MaxLength="250" />
+    <Property Name="ProjeAciklama" Type="varchar(max)" />
+    <Property Name="ProjeDurum" Type="varchar" MaxLength="50" />
+    <Property Name="projeResim" Type="varchar(max)" />
+  </EntityType>
+  <EntityContainer Name="dbInsaatProjesiModelStoreContainer">
+    <EntitySet Name="tbl_admin" EntityType="Self.tbl_admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_anasayfa" EntityType="Self.tbl_anasayfa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_calisanlar" EntityType="Self.tbl_calisanlar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_hakkimizda" EntityType="Self.tbl_hakkimizda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_hizmetler" EntityType="Self.tbl_hizmetler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_iletisim" EntityType="Self.tbl_iletisim" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbl_projeler" EntityType="Self.tbl_projeler" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

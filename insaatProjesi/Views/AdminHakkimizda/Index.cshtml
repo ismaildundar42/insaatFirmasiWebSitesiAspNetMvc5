@@ -1,0 +1,69 @@
+﻿@using insaatProjesi.Models.Entitiy
+@model List<tbl_hakkimizda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Hakkımızda Bilgileri Düzenleme Sayfası</h2>
+<br />
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>BAŞLIK</th>
+        <th>AÇIKLAMA</th>
+        <th>ÇALIŞAN SAYISI</th>
+        <th>MÜŞTERİ MEMNUNİYETİ</th>
+        <th>TAMAMLANMIŞ PROJE SAYISI</th>
+        <th>DEVAM EDEN PROJE SAYISI</th>
+        <th>SORU 1</th>
+        <th>CEVAP 1</th>
+        <th>SORU 2</th>
+        <th>CEVAP 2</th>
+        <th>SORU 3</th>
+        <th>CEVAP 3</th>
+        <th>SORU 4</th>
+        <th>CEVAP 4</th>
+        <th>SORU 5</th>
+        <th>CEVAP 5</th>
+        <th>SORU 6</th>
+        <th>CEVAP 6</th>
+        <th>SİL</th>
+        <th>GUNCELLE</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Baslik</td>
+            <td>@x.Aciklama</td>
+            <td>@x.CalisanSayisi</td>
+            <td>@x.MusteriMemnuniyeti</td>
+            <td>@x.TamamlanmisProjeler</td>
+            <td>@x.DevamEdenProjeler</td>
+            <td>@x.Soru1</td>
+            <td>@x.Cevap1</td>
+            <td>@x.Soru2</td>
+            <td>@x.Cevap2</td>
+            <td>@x.Soru3</td>
+            <td>@x.Cevap3</td>
+            <td>@x.Soru4</td>
+            <td>@x.Cevap4</td>
+            <td>@x.Soru5</td>
+            <td>@x.Cevap5</td>
+            <td>@x.Soru6</td>
+            <td>@x.Cevap6</td>
+            <td><a href="/AdminHakkimizda/HakkimizdaSil/@x.ID" class="btn btn-danger">SİL</a></td>
+            <td><a href="/AdminHakkimizda/HakkimizdaGetir/@x.ID" class="btn btn-primary">GÜNCELLE</a></td>
+        </tr>
+    }
+
+</table>
+
+<br />
+<a href="" class="btn btn-success">Yeni Hakkımızda Bilgisi Ekleme İşlemi</a>
+
+
+

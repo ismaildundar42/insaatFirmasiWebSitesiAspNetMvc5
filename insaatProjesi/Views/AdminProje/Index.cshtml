@@ -1,0 +1,39 @@
+﻿@using insaatProjesi.Models.Entitiy
+@model List<tbl_projeler> 
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Proje Bilgileri Düzenleme Sayfası</h2>
+<br />
+<table class="table table-bordered">
+
+    <tr>
+        <th>ID</th>
+        <th>PROJE ADI</th>
+        <th>PROJE AÇIKLAMA</th>
+        <th>PROJE DURUM</th>
+        <th>PROJE RESİM</th>
+        <th>SİL</th>
+        <th>GUNCELLE</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.ProjeAdı</td>
+            <td>@x.ProjeAciklama</td>
+            <td>@x.ProjeDurum</td>
+            <td>@x.projeResim</td>
+            <td><a href="/AdminProje/ProjeSil/@x.ID" class="btn btn-danger">SİL</a></td>
+            <td><a href="/AdminProje/ProjeGetir/@x.ID" class="btn btn-primary">GÜNCELLE</a></td>
+        </tr>
+    }
+
+</table>
+
+<br />
+<a href="/AdminProje/ProjeEkle/" class="btn btn-success">Yeni Proje Bilgisi Ekleme İşlemi</a>
+

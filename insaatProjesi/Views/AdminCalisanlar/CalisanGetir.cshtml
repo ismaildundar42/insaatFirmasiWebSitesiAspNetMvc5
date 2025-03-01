@@ -1,0 +1,39 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_calisanlar
+@{
+    ViewBag.Title = "CalisanGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Çalışan Bilgileri Güncelleme Sayfası</h2>
+
+<br />
+<br />
+
+<form class="form-group" method="post">
+
+    <div class="mb-3">
+        @Html.Label("Çalışan ID", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", placeholder = "Hizmet ID'sini giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Çalışan Ad Soyad", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.AdSoyad, new { @class = "form-control", placeholder = "Başlık Giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Çalışan Görev", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Gorev, new { @class = "form-control", placeholder = "Başlık Giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Resim", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.ResimUrl, new { @class = "form-control", placeholder = "Resim URL'ni Giriniz" })
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
+
+

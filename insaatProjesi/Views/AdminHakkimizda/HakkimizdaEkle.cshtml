@@ -1,0 +1,69 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_hakkimizda
+@{
+    ViewBag.Title = "HakkimizdaEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>HakkimizdaEkle</h2>
+<br />
+<br />
+
+<form class="form-group" method="post">
+
+    <input type="text" name="Baslik" class="form-control" placeholder="Hakkımızda Başlığını Giriniz..." />
+    <br />
+
+
+    <input type="text" name="Aciklama" class="form-control" placeholder="Hakkımızda Açıklamasını Giriniz..." />
+    <br />
+
+
+    <input type="number" name="CalisanSayisi" class="form-control" placeholder="Çalışan Sayısını Giriniz..." />
+    <br />
+
+    <input type="number" name="MusteriMemnuniyeti" class="form-control" placeholder="Müşteri Memnuniyeti Oranını Giriniz..." />
+    <br />
+
+    <input type="number" name="TamamlanmisProjeler" class="form-control" placeholder="Tamamlanmış Proje Sayısını Giriniz..." />
+    <br />
+
+    <input type="number" name="DevamEdenProjeler" class="form-control" placeholder="Devam Eden Proje Sayısını Giriniz..." />
+    <br />
+
+    <label for="soru1">Soru 1</label>
+    <input type="text" id="soru1" name="Soru1" class="form-control" placeholder="Soruyu giriniz..." />
+    <label for="cevap1">Cevap 1</label>
+    <textarea id="cevap1" name="Cevap1" class="form-control" rows="4" placeholder="Cevabınızı yazınız..."></textarea>
+
+    <label for="soru1">Soru 2</label>
+    <input type="text" id="soru2" name="Soru2" class="form-control" placeholder="Soruyu giriniz..." />
+    <label for="cevap1">Cevap 2</label>
+    <textarea id="cevap2" name="Cevap2" class="form-control" rows="4" placeholder="Cevabınızı yazınız..."></textarea>
+
+    <label for="soru1">Soru 3</label>
+    <input type="text" id="soru1" name="Soru3" class="form-control" placeholder="Soruyu giriniz..." />
+    <label for="cevap1">Cevap 3</label>
+    <textarea id="cevap1" name="Cevap3" class="form-control" rows="4" placeholder="Cevabınızı yazınız..."></textarea>
+
+    <label for="soru1">Soru 4</label>
+    <input type="text" id="soru1" name="Soru4" class="form-control" placeholder="Soruyu giriniz..." />
+    <label for="cevap1">Cevap 4</label>
+    <textarea id="cevap1" name="Cevap4" class="form-control" rows="4" placeholder="Cevabınızı yazınız..."></textarea>
+
+    <label for="soru1">Soru 5</label>
+    <input type="text" id="soru1" name="Soru5" class="form-control" placeholder="Soruyu giriniz..." />
+    <label for="cevap1">Cevap 5</label>
+    <textarea id="cevap1" name="Cevap5" class="form-control" rows="4" placeholder="Cevabınızı yazınız..."></textarea>
+
+    <label for="soru1">Soru 6</label>
+    <input type="text" id="soru1" name="Soru6" class="form-control" placeholder="Soruyu giriniz..." />
+    <label for="cevap1">Cevap 6</label>
+    <textarea id="cevap1" name="Cevap6" class="form-control" rows="4" placeholder="Cevabınızı yazınız..."></textarea>
+
+    <br />
+    <br />
+
+
+    <button class="btn btn-success">Kaydet</button>
+
+</form>

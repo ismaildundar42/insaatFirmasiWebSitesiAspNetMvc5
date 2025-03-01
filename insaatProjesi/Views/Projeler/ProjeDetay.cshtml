@@ -1,0 +1,33 @@
+﻿@using insaatProjesi.Models.Entitiy
+@model List<tbl_projeler>
+@{
+    ViewBag.Title = "ProjeDetay";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+
+<div class="about wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container">
+        @foreach (var x in Model)
+        {
+            <div class="row align-items-center mb-5">
+                <!-- Hizmetler Arasında Boşluk Ekledik -->
+                <div class="col-lg-5 col-md-6">
+                    <div class="about-img">
+                        <img src="@x.projeResim" alt="Hizmet Görseli">
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6">
+                    <div class="section-header text-left">
+                        <h2>@x.ProjeAdı</h2> <!-- Gereksiz <p> kaldırıldı -->
+                    </div>
+                    <div class="about-text">
+                        <p>@x.ProjeAciklama</p> <!-- Açıklamayı uygun etikete aldık -->
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+

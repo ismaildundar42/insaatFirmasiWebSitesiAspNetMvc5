@@ -1,0 +1,46 @@
+﻿@using insaatProjesi.Models.Entitiy
+@model List<tbl_hizmetler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+    int totalItems = Model.Count;
+    int itemsPerRow = 3;
+}
+
+<div class="service">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Hizmetlerimiz</p>
+            <h2>Şu Hizmetleri Sunuyoruz</h2>
+        </div>
+
+        @for (int i = 0; i < totalItems; i += itemsPerRow)
+        {
+            <div class="row">
+                @for (int j = i; j < i + itemsPerRow && j < totalItems; j++)
+                {
+                    var x = Model[j];
+                    var shortDesc = x.Aciklama.Length > 100 ? x.Aciklama.Substring(0, 100) + "..." : x.Aciklama;
+
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="service-item">
+                            <div class="service-img">
+                                <img src="@x.Resim" alt="Image">
+                                <div class="service-overlay">
+                                    <p>@shortDesc</p> <!-- Açıklama 100 karaktere düşürüldü -->
+                                </div>
+                            </div>
+                            <div class="service-text">
+                                <h3>@x.Baslik</h3>
+                                <a class="btn" href="/Hizmetler/hizmetDetay/@x.ID" target="_self" onclick="event.stopPropagation();">
+                                    +
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>

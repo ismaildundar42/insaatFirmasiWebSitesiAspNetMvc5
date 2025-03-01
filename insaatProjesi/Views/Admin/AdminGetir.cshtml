@@ -1,0 +1,31 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_admin
+@{
+    ViewBag.Title = "AdminGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Admin Bilgileri Güncelleme Sayfası</h2>
+
+<br />
+<br />
+
+<form class="form-group" method="post">
+
+
+    <div class="mb-3">
+        @Html.Label("Kullanıcı Adı", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control", placeholder = "Kullanıcı Adı Bilgisini Giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Telefon", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control", placeholder = "Şifre Bilgisini Giriniz" })
+    </div>
+
+   
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
+
+

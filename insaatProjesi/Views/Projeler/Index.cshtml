@@ -1,0 +1,105 @@
+﻿@using insaatProjesi.Models.Entitiy
+@model List<tbl_projeler>
+
+@{
+    ViewBag.Title = "Projeler";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+<div class="portfolio">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Projelerimiz</p>
+            <h2>Projelerimizi İnceleyin</h2>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <ul id="portfolio-flters">
+                    <li data-filter="all" class="filter-active">Hepsi</li>
+                    <li data-filter="bas">Planlanmış</li>
+                    <li data-filter="devam">Devam Eden</li>
+                    <li data-filter="tamam">Tamamlanmış</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row portfolio-container" id="projectContainer">
+            @foreach (var x in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item project-item @x.ProjeDurum @(Model.IndexOf(x) >= 6 ? "hidden" : "")">
+                    <div class="portfolio-warp">
+                        <div class="portfolio-img">
+                            <img src="@x.projeResim" alt="Image">
+                            <div class="portfolio-overlay">
+                                <p>@x.ProjeAciklama</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-text">
+                            <h3>@x.ProjeAdı</h3>
+                            <a class="btn" href="/Projeler/ProjeDetay/@x.ID">+</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="row">
+            <div class="col-12 load-more">
+                <a class="btn" id="loadMoreBtn">Daha Fazla Yükleyin</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        function updateLoadMore() {
+            let projects = document.querySelectorAll(".project-item.hidden");
+            let loadMoreBtn = document.getElementById("loadMoreBtn");
+            let index = 0;
+            let loadCount = 3;
+
+            loadMoreBtn.style.display = projects.length > 0 ? "block" : "none";
+
+            loadMoreBtn.onclick = function () {
+                let shown = 0;
+                for (let i = index; i < projects.length && shown < loadCount; i++) {
+                    projects[i].classList.remove("hidden");
+                    shown++;
+                    index++;
+                }
+                if (index >= projects.length) {
+                    loadMoreBtn.style.display = "none";
+                }
+            };
+        }
+
+        $("#portfolio-flters li").click(function () {
+            $("#portfolio-flters li").removeClass("filter-active");
+            $(this).addClass("filter-active");
+
+            var filter = $(this).data("filter");
+
+            $.ajax({
+                url: "/Projeler/Index",
+                type: "GET",
+                data: { filter: filter },
+                success: function (data) {
+                    var content = $(data).find("#projectContainer").html();
+                    $("#projectContainer").html(content);
+                    updateLoadMore();
+                }
+            });
+        });
+
+        updateLoadMore();
+    });
+</script>
+
+<style>
+    .hidden {
+        display: none;
+    }
+</style>

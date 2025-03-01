@@ -1,0 +1,39 @@
+﻿@model insaatProjesi.Models.Entitiy.tbl_iletisim
+
+@{
+    ViewBag.Title = "IletisimBilgileriGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>İletişim Bilgileri Güncelleme Sayfası</h2>
+
+<br />
+<br />
+
+<form class="form-group" method="post">
+
+    <div class="mb-3">
+        @Html.Label("İletişim ID", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.ID, new { @class = "form-control", placeholder = "İletişim ID'sini giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Konum", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Konum, new { @class = "form-control", placeholder = "Konum Bilgisini Giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Telefon", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Telefon, new { @class = "form-control", placeholder = "Telefon Bilgisini Giriniz" })
+    </div>
+
+    <div class="mb-3">
+        @Html.Label("Mail", htmlAttributes: new { @class = "form-label" })
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control", placeholder = "Mail Bilgisini Giriniz" })
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Güncelle</button>
+</form>
+

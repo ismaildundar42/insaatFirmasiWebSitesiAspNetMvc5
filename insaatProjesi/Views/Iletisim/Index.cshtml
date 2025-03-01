@@ -1,0 +1,72 @@
+﻿@using insaatProjesi.Models.Entitiy;
+@model List<tbl_iletisim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AnaLayout.cshtml";
+}
+
+<div class="contact wow fadeInUp">
+        <div class="container">
+            <div class="section-header text-center">
+                <p>Bizimle İletişime Geçin</p>
+                <h2>Her Türlü Sorunuz Hakkında</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    @foreach (var x in Model)
+                    {
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="flaticon-address"></i>
+                                <div class="contact-text">
+                                    <h2>Konum</h2>
+                                    <p>@x.Konum</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="flaticon-call"></i>
+                                <div class="contact-text">
+                                    <h2>Phone</h2>
+                                    <p>@x.Telefon</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="flaticon-send-mail"></i>
+                                <div class="contact-text">
+                                    <h2>Email</h2>
+                                    <p>@x.Mail</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    </div>
+                   
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <div id="success"></div>
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="name" placeholder="Kullanıcı Adınız" required="required" data-validation-required-message="Kullanıcı Adınız" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="email" class="form-control" id="email" placeholder="Mail Adresiniz" required="required" data-validation-required-message="Mail Adresiniz" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <input type="text" class="form-control" id="subject" placeholder="Konu" required="required" data-validation-required-message="Konu" />
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="control-group">
+                                <textarea class="form-control" id="message" placeholder="Mesajınız" required="required" data-validation-required-message="Mesajınızı Giriniz"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div>
+                                <button class="btn" type="submit" id="sendMessageButton">Mesaj Gönder</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
